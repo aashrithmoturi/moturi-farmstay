@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || "https://moturi-farmstay.vercel.app",
+  siteUrl: process.env.SITE_URL || "https://moturifarmstay.in",
   generateRobotsTxt: true,
   sitemapSize: 7000,
   changefreq: "weekly",

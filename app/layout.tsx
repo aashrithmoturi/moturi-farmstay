@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://moturifarmstay.in"),
   title: {
     default: "Moturi Farmstay Vemulawada | Best Hotel, Rooms & Farm Stay in Vemulawada, Sircilla",
     template: "%s | Moturi Farmstay Vemulawada",
@@ -83,7 +84,8 @@ const jsonLd = {
   name: "Moturi Farmstay Vemulawada",
   description:
     "Best hotel and farmhouse stay in Vemulawada, Rajanna Sircilla district, Telangana. Affordable rooms, family-friendly accommodation near Sri Raja Rajeshwara Swamy Temple.",
-  image: "/images/poster-farmstay3.png",
+  url: "https://moturifarmstay.in",
+  image: "https://moturifarmstay.in/images/poster-farmstay3.png",
   telephone: ["+919505834657", "+919440134657"],
   address: {
     "@type": "PostalAddress",
