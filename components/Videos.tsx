@@ -1,8 +1,8 @@
 export default function Videos() {
   const videos = [
-    { src: "/videos/small-outside-view.mp4", title: "Outside View" },
-    { src: "/videos/VID-20260305-WA0004.mp4", title: "Farmstay Tour" },
-    { src: "/videos/VID-20260601-WA0005.mp4", title: "Farm Experience" },
+    { src: "/videos/small-outside-view.mp4", title: "Outside View", poster: "/images/Main-Hotel.png" },
+    { src: "/videos/VID-20260305-WA0004.mp4", title: "Farmstay Tour", poster: "/images/Grass-Land-Hotel.jpg" },
+    { src: "/videos/VID-20260601-WA0005.mp4", title: "Farm Experience", poster: "/images/Cattle-Hotel.jpg" },
   ];
 
   return (
@@ -21,7 +21,8 @@ export default function Videos() {
               <video
                 src={video.src}
                 controls
-                preload="metadata"
+                preload="none"
+                poster={video.poster}
                 className="w-full h-48 sm:h-56 object-cover bg-black"
               />
               <p className="text-white font-medium text-center py-3">

@@ -54,12 +54,6 @@ export default function Page() {
           As one of the most affordable and comfortable stays in the <strong>Rajanna Sircilla</strong> district, our <strong>rooms in Vemulawada</strong> attract visitors from Sircilla, Karimnagar, and Hyderabad. Experience village life, cattle farming, and nature while enjoying modern comforts in our farmstay rooms.
         </p>
 
-        <div className="grid sm:grid-cols-3 gap-4 mb-8">
-          <img src="/images/Bedroom-hotel-1.png" alt="Room in Vemulawada - Bedroom" className="rounded-xl shadow-md w-full h-48 object-cover" />
-          <img src="/images/Living-Room-Hotel.jpg" alt="Room in Vemulawada - Living Room" className="rounded-xl shadow-md w-full h-48 object-cover" />
-          <img src="/images/Kitchen-Hotel.jpg" alt="Room in Vemulawada - Kitchen" className="rounded-xl shadow-md w-full h-48 object-cover" />
-        </div>
-
         <div className="flex flex-wrap gap-4">
           <a href="tel:+919505834657" className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition">📞 Call Now</a>
           <a href="https://wa.me/919505834657" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition">💬 WhatsApp</a>

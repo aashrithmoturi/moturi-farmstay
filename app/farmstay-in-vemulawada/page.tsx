@@ -54,12 +54,6 @@ export default function Page() {
           Our <strong>farmhouse in Vemulawada</strong> is one of the few <strong>farmstay options in Rajanna Sircilla</strong> district. Visitors from Sircilla, Karimnagar, Hyderabad, and across Telangana choose Moturi Farmstay for its unique combination of nature, comfort, and temple proximity. Experience the real village life at our <strong>farmstay near Sircilla</strong>.
         </p>
 
-        <div className="grid sm:grid-cols-3 gap-4 mb-8">
-          <img src="/images/Grass-Hotel.jpg" alt="Farmstay in Vemulawada - Grassland" className="rounded-xl shadow-md w-full h-48 object-cover" />
-          <img src="/images/Cattle-Hotel.jpg" alt="Farmstay in Vemulawada - Cattle" className="rounded-xl shadow-md w-full h-48 object-cover" />
-          <img src="/images/Water-Farm-Hotel.jpg" alt="Farmhouse in Vemulawada - Farm" className="rounded-xl shadow-md w-full h-48 object-cover" />
-        </div>
-
         <div className="flex flex-wrap gap-4">
           <a href="tel:+919505834657" className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition">📞 Call Now</a>
           <a href="https://wa.me/919505834657" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition">💬 WhatsApp</a>

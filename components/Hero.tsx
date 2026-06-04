@@ -1,10 +1,15 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="relative h-[70vh] sm:h-[80vh] md:h-[85vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-black">
-      <img
+      <Image
         src="/images/poster-farmstay3.png"
         alt="Moturi Farmstay Vemulawada"
-        className="absolute inset-0 w-full h-full object-cover"
+        fill
+        priority
+        className="object-cover"
+        sizes="100vw"
       />
       <div className="absolute inset-0 bg-black/40" />
       <div className="relative z-10 bg-black/30 backdrop-blur-sm p-6 sm:p-10 rounded-2xl text-center text-white max-w-2xl mx-4">

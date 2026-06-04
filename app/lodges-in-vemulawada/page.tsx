@@ -54,12 +54,6 @@ export default function Page() {
           As a top <strong>lodge in Sircilla</strong> district, Moturi Farmstay is easily accessible from Sircilla town, Karimnagar, and Hyderabad. Whether you are looking for a <strong>lodge in Vemulawada</strong> or a <strong>lodge near Sircilla</strong>, our farmstay delivers the best value with spacious rooms, nature views, and temple proximity.
         </p>
 
-        <div className="grid sm:grid-cols-3 gap-4 mb-8">
-          <img src="/images/Main-Hotel.png" alt="Lodge in Vemulawada - Main View" className="rounded-xl shadow-md w-full h-48 object-cover" />
-          <img src="/images/Bedroom-Hotel-2.png" alt="Lodge in Vemulawada - Bedroom" className="rounded-xl shadow-md w-full h-48 object-cover" />
-          <img src="/images/Grass-Land-Hotel.jpg" alt="Lodge in Vemulawada - Surroundings" className="rounded-xl shadow-md w-full h-48 object-cover" />
-        </div>
-
         <div className="flex flex-wrap gap-4">
           <a href="tel:+919505834657" className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition">📞 Call Now</a>
           <a href="https://wa.me/919505834657" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition">💬 WhatsApp</a>

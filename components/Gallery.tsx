@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Gallery() {
   const images = [
     { src: "/images/poster-farmstay3.png", alt: "Moturi Farmstay Poster" },
@@ -30,12 +32,16 @@ export default function Gallery() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
           {images.map((image) => (
-            <img
-              key={image.src}
-              src={image.src}
-              alt={image.alt}
-              className="rounded-xl shadow-md h-40 sm:h-56 w-full object-cover hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
-            />
+            <div key={image.src} className="relative h-40 sm:h-56 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                loading="lazy"
+              />
+            </div>
           ))}
         </div>
       </div>
