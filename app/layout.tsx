@@ -85,8 +85,8 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "LodgingBusiness",
-  name: "Moturi Farmstay Vemulawada",
+  "@type": ["Hotel", "LodgingBusiness"],
+  name: "Hotel Moturi Farmstay Vemulawada",
   description:
     "Best hotel and farmhouse stay in Vemulawada, Rajanna Sircilla district, Telangana. Affordable rooms, family-friendly accommodation near Sri Raja Rajeshwara Swamy Temple.",
   url: "https://moturifarmstay.in",
@@ -113,8 +113,17 @@ const jsonLd = {
     { "@type": "LocationFeatureSpecification", name: "Photoshoot Location" },
   ],
   priceRange: "$$",
-  starRating: { "@type": "Rating", ratingValue: "4.5" },
-  areaServed: ["Vemulawada", "Sircilla", "Rajanna Sircilla"],
+  sameAs: [
+    "https://www.instagram.com/moturi_farmstay",
+  ],
+  hasMap: "https://maps.app.goo.gl/qkqvn5jU1RFSxZnx9",
+  checkinTime: "11:00",
+  checkoutTime: "10:00",
+  containsPlace: [
+    { "@type": "TouristAttraction", name: "Sri Raja Rajeshwara Swamy Temple" },
+    { "@type": "TouristAttraction", name: "Nampally Narasimha Swamy Temple" },
+  ],
+  areaServed: ["Vemulawada", "Sircilla", "Rajanna Sircilla", "Hyderabad"],
 };
 
 export default function RootLayout({
