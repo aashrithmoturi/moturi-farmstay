@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://moturifarmstay.in"),
+  metadataBase: new URL("https://www.moturifarmstay.in"),
   title: {
     default: "Moturi Farmstay Vemulawada | Best Hotel, Rooms & Farm Stay in Vemulawada, Sircilla",
     template: "%s | Moturi Farmstay Vemulawada",
@@ -89,8 +89,8 @@ const jsonLd = {
   name: "Hotel Moturi Farmstay Vemulawada",
   description:
     "Best hotel and farmhouse stay in Vemulawada, Rajanna Sircilla district, Telangana. Affordable rooms, family-friendly accommodation near Sri Raja Rajeshwara Swamy Temple.",
-  url: "https://moturifarmstay.in",
-  image: "https://moturifarmstay.in/images/poster-farmstay3.png",
+  url: "https://www.moturifarmstay.in",
+  image: "https://www.moturifarmstay.in/images/poster-farmstay3.png",
   telephone: ["+919505834657", "+919440134657"],
   address: {
     "@type": "PostalAddress",
@@ -140,21 +140,9 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-EYEZKNLMPV"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-EYEZKNLMPV');
-          `}
-        </Script>
         {children}
       </body>
+      <GoogleAnalytics gaId="G-EYEZKNLMPV" />
     </html>
   );
 }

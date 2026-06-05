@@ -7,9 +7,7 @@ export default function About() {
         </h2>
 
         <p className="text-base sm:text-lg leading-7 sm:leading-8 text-stone-700">
-          Moturi Farmstay is a peaceful farmhouse stay located on Marupaka Road,
-          near Reddy Bhavan in Vemulawada. Surrounded by greenery, open spaces,
-          and cattle, it offers a perfect combination of comfort and nature.
+          Moturi Farm Stay is a peaceful getaway located on Marupaka Road, near Reddy Bhavan in Vemulawada. Surrounded by lush greenery, open spaces, and farm animals, it offers the perfect blend of comfort and nature, making it an ideal place to relax and unwind.
         </p>
 
         <p className="text-base sm:text-lg leading-7 sm:leading-8 mt-4 text-stone-700">
