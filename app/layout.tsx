@@ -73,6 +73,10 @@ export const metadata: Metadata = {
     },
   },
 
+  verification: {
+    google: "T_HRgkWyrOkgVSMnMJKjhaMp_r4WdOXaIVLl7iHUOEU",
+  },
+
   alternates: {
     canonical: "/",
   },
