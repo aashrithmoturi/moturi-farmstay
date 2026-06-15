@@ -9,6 +9,7 @@ import GoogleMap from "../components/GoogleMap";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
+import Reviews from "../components/Reviews";
 
 export default function Home() {
   return (
@@ -57,6 +58,7 @@ export default function Home() {
         </div>
       </section>
       <GoogleMap />
+      <Reviews />
       <Contact />
       <Footer />
       <WhatsAppButton />
