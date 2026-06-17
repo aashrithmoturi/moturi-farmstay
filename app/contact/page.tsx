@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { FaPhoneAlt as FaPhone, FaWhatsapp } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "Contact Moturi Farmstay Vemulawada | Book Your Stay",
@@ -31,8 +32,8 @@ export default function Page() {
           <div className="bg-amber-50 p-6 sm:p-8 rounded-xl border border-amber-100">
             <h2 className="text-2xl font-bold text-teal-800 mb-4">Contact Details</h2>
             <div className="space-y-4 text-stone-700 text-base sm:text-lg">
-              <p>📞 <strong><a href="tel:+919505834657" className="text-teal-700 hover:underline">9505834657</a></strong></p>
-              <p>📞 <strong><a href="tel:+919440134657" className="text-teal-700 hover:underline">9440134657</a></strong></p>
+              <p><FaPhone className="mr-2 inline align-[-0.125em]" /><strong><a href="tel:+919505834657" className="text-teal-700 hover:underline">9505834657</a></strong></p>
+              <p><FaPhone className="mr-2 inline align-[-0.125em]" /><strong><a href="tel:+919440134657" className="text-teal-700 hover:underline">9440134657</a></strong></p>
               <p>📍 Marupaka Road, Near Reddy Bhavan, Vemulawada, Telangana</p>
               <p>🏡 1BHK Farmstay — Accommodates up to 10 Adults</p>
             </div>
@@ -41,8 +42,8 @@ export default function Page() {
           <div className="bg-amber-50 p-6 sm:p-8 rounded-xl border border-amber-100">
             <h2 className="text-2xl font-bold text-teal-800 mb-4">Quick Actions</h2>
             <div className="space-y-4">
-              <a href="tel:+919505834657" className="block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition text-center">📞 Call Now</a>
-              <a href="https://wa.me/919505834657" target="_blank" rel="noopener noreferrer" className="block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition text-center">💬 WhatsApp</a>
+              <a href="tel:+919505834657" className="block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition text-center"><FaPhone className="mr-2 inline align-[-0.125em]" />Call Now</a>
+              <a href="https://wa.me/919505834657" target="_blank" rel="noopener noreferrer" className="block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition text-center"><FaWhatsapp className="mr-2 inline align-[-0.125em]" />WhatsApp</a>
               <a href="https://www.instagram.com/moturi_farmstay" target="_blank" rel="noopener noreferrer" className="block bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition text-center">📸 Instagram</a>
               <a href="https://maps.app.goo.gl/dCrcgJqSKvj3YGEW9" target="_blank" rel="noopener noreferrer" className="block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition text-center">📍 Get Directions</a>
             </div>

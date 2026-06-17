@@ -1,6 +1,25 @@
 import type { Metadata } from "next";
+import { Cinzel, Spectral } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
+
+// Royal, regal display face for headings — deliberately distinct from
+// Chilkur's Playfair. Cinzel reads like carved temple inscriptions.
+const displayFont = Cinzel({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+// Elegant readable serif for body copy — pairs a royal feel with comfort.
+const bodyFont = Spectral({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-body",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.moturifarmstay.in"),
@@ -138,7 +157,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${displayFont.variable} ${bodyFont.variable}`}>
       <head>
         <script
           type="application/ld+json"

@@ -1,3 +1,5 @@
+import { Reveal, Stagger, RevealItem } from "./motion/Reveal";
+
 export default function Attractions() {
   const places = [
     {
@@ -23,38 +25,35 @@ export default function Attractions() {
   return (
     <section
       id="attractions"
-      className="py-12 sm:py-20 bg-amber-50"
+      className="relative overflow-hidden bg-amber-50 py-12 sm:py-20"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-3 sm:mb-4 text-teal-800">
-          Nearby Attractions
-        </h2>
+      <span className="mo-blob right-0 top-0 h-56 w-56 bg-teal-300/40" />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+        <Reveal direction="up">
+          <h2 className="mb-3 text-center text-3xl font-bold text-teal-800 sm:mb-4 sm:text-4xl">
+            Nearby Attractions
+          </h2>
+          <p className="mb-8 text-center text-sm text-stone-600 sm:mb-12 sm:text-base">
+            Explore famous temples and spiritual destinations near Moturi
+            Farmstay Vemulawada.
+          </p>
+        </Reveal>
 
-        <p className="text-center text-stone-600 mb-8 sm:mb-12 text-sm sm:text-base">
-          Explore famous temples and spiritual destinations near Moturi
-          Farmstay Vemulawada.
-        </p>
-
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+        <Stagger className="grid gap-6 sm:grid-cols-2 sm:gap-8 md:grid-cols-3">
           {places.map((place) => (
-            <div
-              key={place.name}
-              className="bg-white p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition border border-amber-100"
-            >
-              <h3 className="text-xl font-semibold mb-3 text-teal-800">
-                {place.name}
-              </h3>
-
-              <p className="text-green-700 font-medium mb-3">
-                📍 {place.distance}
-              </p>
-
-              <p className="text-stone-600 leading-7">
-                {place.description}
-              </p>
-            </div>
+            <RevealItem key={place.name} direction="up">
+              <div className="mo-card mo-sweep h-full rounded-2xl border border-amber-100 bg-white p-6 shadow-md sm:p-8">
+                <h3 className="mb-3 text-xl font-semibold text-teal-800">
+                  {place.name}
+                </h3>
+                <p className="mb-3 font-medium text-green-700">
+                  📍 {place.distance}
+                </p>
+                <p className="leading-7 text-stone-600">{place.description}</p>
+              </div>
+            </RevealItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

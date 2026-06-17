@@ -51,8 +51,16 @@ export default function Home() {
               <p className="text-stone-600 text-sm">Just 6 km from Sri Raja Rajeshwara Swamy Temple — perfect for Bonalu and weekend pilgrimages.</p>
             </a>
             <a href="/booking" className="bg-white p-6 rounded-xl border border-amber-100 hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
-              <h3 className="text-lg font-bold text-teal-800 mb-2">📞 Book Your Stay</h3>
+              <h3 className="text-lg font-bold text-teal-800 mb-2">� Book Your Stay</h3>
               <p className="text-stone-600 text-sm">Call or WhatsApp to check availability and reserve your farmstay in Vemulawada today.</p>
+            </a>
+            <a href="/raja-rajeshwara-temple" className="bg-white p-6 rounded-xl border border-amber-100 hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
+              <h3 className="text-lg font-bold text-teal-800 mb-2">🛕 Raja Rajeshwara Temple</h3>
+              <p className="text-stone-600 text-sm">Darshan timings, history, festivals and the famous Kode Mokku ritual at the Dakshina Kashi of Telangana.</p>
+            </a>
+            <a href="/parameshwari-store" className="bg-white p-6 rounded-xl border border-amber-100 hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
+              <h3 className="text-lg font-bold text-teal-800 mb-2">🛍️ Parameshwari Store</h3>
+              <p className="text-stone-600 text-sm">Idols, Lord Shiva photo frames, sports goods, household items & toys — all at wholesale prices.</p>
             </a>
           </div>
         </div>

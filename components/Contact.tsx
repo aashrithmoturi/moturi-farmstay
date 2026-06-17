@@ -1,3 +1,5 @@
+import { FaPhoneAlt as FaPhone, FaWhatsapp, FaInstagram, FaMapMarkerAlt, FaHome, FaUsers } from "react-icons/fa";
+
 export default function Contact() {
   return (
     <section
@@ -22,24 +24,24 @@ export default function Contact() {
 
             <div className="space-y-4">
               <p>
-                📞 <strong>9505834657</strong>
+                <FaPhone className="mr-2 inline align-[-0.125em]" /><strong>9505834657</strong>
               </p>
 
               <p>
-                📞 <strong>9440134657</strong>
+                <FaPhone className="mr-2 inline align-[-0.125em]" /><strong>9440134657</strong>
               </p>
 
               <p>
-                📍 Marupaka Road, Near Reddy Bhavan,
+                <FaMapMarkerAlt className="mr-2 inline align-[-0.125em]" />Marupaka Road, Near Reddy Bhavan,
                 Vemulawada, Telangana
               </p>
 
               <p>
-                🏡 1BHK Farmstay
+                <FaHome className="mr-2 inline align-[-0.125em]" />1BHK Farmstay
               </p>
 
               <p>
-                👨‍👩‍👧‍👦 Accommodates Up To 10 Adults
+                <FaUsers className="mr-2 inline align-[-0.125em]" />Accommodates Up To 10 Adults
               </p>
             </div>
 
@@ -48,7 +50,7 @@ export default function Contact() {
                 href="tel:+919505834657"
                 className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-semibold"
               >
-                Call Now
+                <FaPhone className="mr-2 inline align-[-0.125em]" />Call Now
               </a>
 
               <a
@@ -57,7 +59,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-lg font-semibold"
               >
-                WhatsApp
+                <FaWhatsapp className="mr-2 inline align-[-0.125em]" />WhatsApp
               </a>
 
               <a
@@ -66,7 +68,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="bg-pink-600 hover:bg-pink-700 px-6 py-3 rounded-lg font-semibold"
               >
-                Instagram
+                <FaInstagram className="mr-2 inline align-[-0.125em]" />Instagram
               </a>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { FaPhoneAlt as FaPhone, FaWhatsapp } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "Book Hotel in Vemulawada | Moturi Farmstay Booking",
@@ -61,8 +62,8 @@ export default function Page() {
         </div>
 
         <div className="flex flex-wrap gap-4 justify-center">
-          <a href="tel:+919505834657" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition text-lg">📞 Call 9505834657</a>
-          <a href="https://wa.me/919505834657" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition text-lg">💬 WhatsApp Now</a>
+          <a href="tel:+919505834657" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition text-lg"><FaPhone className="mr-2 inline align-[-0.125em]" />Call 9505834657</a>
+          <a href="https://wa.me/919505834657" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition text-lg"><FaWhatsapp className="mr-2 inline align-[-0.125em]" />WhatsApp Now</a>
         </div>
       </main>
       <Footer />

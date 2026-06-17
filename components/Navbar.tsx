@@ -1,44 +1,87 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+
+const links = [
+  { href: "/#about", label: "About" },
+  { href: "/#gallery", label: "Gallery" },
+  { href: "/raja-rajeshwara-temple", label: "Temple" },
+  { href: "/parameshwari-store", label: "Store" },
+  { href: "/#attractions", label: "Nearby" },
+  { href: "/#contact", label: "Contact" },
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-teal-800 shadow-lg">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 py-3 sm:py-4">
-        <h1 className="text-xl sm:text-2xl font-bold text-white tracking-wide">
+    <motion.nav
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ type: "spring", stiffness: 80, damping: 16 }}
+      className="sticky top-0 z-50 bg-teal-800/95 shadow-lg backdrop-blur supports-[backdrop-filter]:bg-teal-800/80"
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
+        <motion.a
+          href="/"
+          whileHover={{ scale: 1.04 }}
+          className="text-xl font-bold tracking-wide text-white sm:text-2xl"
+        >
           🌿 Moturi Farmstay
-        </h1>
+        </motion.a>
 
         {/* Mobile hamburger */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-white text-2xl focus:outline-none"
+          className="text-2xl text-white focus:outline-none md:hidden"
           aria-label="Toggle menu"
         >
           {open ? "✕" : "☰"}
         </button>
 
         {/* Desktop links */}
-        <div className="hidden md:flex gap-8">
-          <a href="#about" className="text-green-100 font-medium hover:text-white transition">About</a>
-          <a href="#gallery" className="text-green-100 font-medium hover:text-white transition">Gallery</a>
-          <a href="#attractions" className="text-green-100 font-medium hover:text-white transition">Nearby Places</a>
-          <a href="#contact" className="text-green-100 font-medium hover:text-white transition">Contact</a>
+        <div className="hidden gap-7 md:flex">
+          {links.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="mo-link font-medium text-green-100 transition hover:text-white"
+            >
+              {l.label}
+            </a>
+          ))}
         </div>
       </div>
 
       {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden bg-teal-900 border-t border-teal-700 px-4 pb-4 flex flex-col gap-3">
-          <a href="#about" onClick={() => setOpen(false)} className="text-green-100 font-medium hover:text-white transition py-2">About</a>
-          <a href="#gallery" onClick={() => setOpen(false)} className="text-green-100 font-medium hover:text-white transition py-2">Gallery</a>
-          <a href="#attractions" onClick={() => setOpen(false)} className="text-green-100 font-medium hover:text-white transition py-2">Nearby Places</a>
-          <a href="#contact" onClick={() => setOpen(false)} className="text-green-100 font-medium hover:text-white transition py-2">Contact</a>
-        </div>
-      )}
-    </nav>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden border-t border-teal-700 bg-teal-900 md:hidden"
+          >
+            <div className="flex flex-col gap-1 px-4 py-3">
+              {links.map((l, i) => (
+                <motion.a
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  initial={{ x: -20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: i * 0.05 }}
+                  className="py-2 font-medium text-green-100 transition hover:text-white"
+                >
+                  {l.label}
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
 }

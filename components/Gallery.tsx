@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Reveal, Stagger, RevealItem } from "./motion/Reveal";
 
 export default function Gallery() {
   const images = [
@@ -21,29 +22,37 @@ export default function Gallery() {
   ];
 
   return (
-    <section id="gallery" className="py-12 sm:py-20 bg-stone-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 text-center text-teal-800">
-          Gallery
-        </h2>
-        <p className="text-center text-stone-600 mb-8 sm:mb-12 text-sm sm:text-base">
-          Explore our farmstay — rooms, surroundings, cattle, and nature.
-        </p>
+    <section id="gallery" className="bg-stone-50 py-12 sm:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <Reveal direction="up">
+          <h2 className="mb-3 text-center text-3xl font-bold text-teal-800 sm:mb-4 sm:text-4xl">
+            Gallery
+          </h2>
+          <p className="mb-8 text-center text-sm text-stone-600 sm:mb-12 sm:text-base">
+            Explore our farmstay — rooms, surroundings, cattle, and nature.
+          </p>
+        </Reveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+        <Stagger
+          gap={0.06}
+          className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4"
+        >
           {images.map((image) => (
-            <div key={image.src} className="relative h-40 sm:h-56 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                loading="lazy"
-              />
-            </div>
+            <RevealItem key={image.src} direction="blur">
+              <div className="mo-group mo-card relative h-40 overflow-hidden rounded-xl shadow-md sm:h-56">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="mo-img object-cover"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  loading="lazy"
+                />
+                <span className="mo-wash" />
+              </div>
+            </RevealItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

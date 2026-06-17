@@ -1,3 +1,5 @@
+import { Reveal, Stagger, RevealItem } from "./motion/Reveal";
+
 export default function Videos() {
   const videos = [
     { src: "/videos/small-outside-view.mp4", title: "Outside View", poster: "/images/Main-Hotel.png" },
@@ -6,31 +8,35 @@ export default function Videos() {
   ];
 
   return (
-    <section id="videos" className="py-12 sm:py-20 bg-teal-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 text-center text-white">
-          Videos
-        </h2>
-        <p className="text-center text-green-200 mb-8 sm:mb-12 text-sm sm:text-base">
-          Watch our farmstay in action — the surroundings, rooms, and nature.
-        </p>
+    <section id="videos" className="bg-teal-800 py-12 sm:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <Reveal direction="up">
+          <h2 className="mb-3 text-center text-3xl font-bold text-white sm:mb-4 sm:text-4xl">
+            Videos
+          </h2>
+          <p className="mb-8 text-center text-sm text-green-200 sm:mb-12 sm:text-base">
+            Watch our farmstay in action — the surroundings, rooms, and nature.
+          </p>
+        </Reveal>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+        <Stagger className="grid gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-3">
           {videos.map((video) => (
-            <div key={video.src} className="rounded-xl overflow-hidden shadow-lg bg-teal-900">
-              <video
-                src={video.src}
-                controls
-                preload="none"
-                poster={video.poster}
-                className="w-full h-48 sm:h-56 object-cover bg-black"
-              />
-              <p className="text-white font-medium text-center py-3">
-                {video.title}
-              </p>
-            </div>
+            <RevealItem key={video.src} direction="zoom">
+              <div className="mo-card overflow-hidden rounded-xl bg-teal-900 shadow-lg">
+                <video
+                  src={video.src}
+                  controls
+                  preload="none"
+                  poster={video.poster}
+                  className="h-48 w-full bg-black object-cover sm:h-56"
+                />
+                <p className="py-3 text-center font-medium text-white">
+                  {video.title}
+                </p>
+              </div>
+            </RevealItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );
