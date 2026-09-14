@@ -27,8 +27,10 @@ export default function Footer() {
           <div>
             <h3 className="mb-3 text-lg font-bold text-white">Contact</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="tel:9505834657" className="transition hover:text-white"><FaPhone className="mr-2 inline align-[-0.125em]" />9505834657</a></li>
-              <li><a href="tel:9440134657" className="transition hover:text-white"><FaPhone className="mr-2 inline align-[-0.125em]" />9440134657</a></li>
+              <li><a href="tel:+919505834657" className="transition hover:text-white"><FaPhone className="mr-2 inline align-[-0.125em]" />095058 34657 / 9505834657</a></li>
+              <li><a href="tel:+919440134657" className="transition hover:text-white"><FaPhone className="mr-2 inline align-[-0.125em]" />094401 34657 / 9440134657</a></li>
+              <li><a href="tel:+918074305036" className="transition hover:text-white"><FaPhone className="mr-2 inline align-[-0.125em]" />080743 05036 / 8074305036</a></li>
+              <li><a href="tel:+919113031401" className="transition hover:text-white"><FaPhone className="mr-2 inline align-[-0.125em]" />091130 31401 / 9113031401</a></li>
               <li><a href="https://wa.me/919505834657" target="_blank" rel="noopener noreferrer" className="transition hover:text-white"><FaWhatsapp className="mr-2 inline align-[-0.125em]" />WhatsApp</a></li>
               <li>📍 Marupaka Road, Vemulawada, Telangana</li>
             </ul>

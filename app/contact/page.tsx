@@ -32,8 +32,10 @@ export default function Page() {
           <div className="bg-amber-50 p-6 sm:p-8 rounded-xl border border-amber-100">
             <h2 className="text-2xl font-bold text-teal-800 mb-4">Contact Details</h2>
             <div className="space-y-4 text-stone-700 text-base sm:text-lg">
-              <p><FaPhone className="mr-2 inline align-[-0.125em]" /><strong><a href="tel:+919505834657" className="text-teal-700 hover:underline">9505834657</a></strong></p>
-              <p><FaPhone className="mr-2 inline align-[-0.125em]" /><strong><a href="tel:+919440134657" className="text-teal-700 hover:underline">9440134657</a></strong></p>
+              <p><FaPhone className="mr-2 inline align-[-0.125em]" /><strong><a href="tel:+919505834657" className="text-teal-700 hover:underline">095058 34657 / 9505834657</a></strong></p>
+              <p><FaPhone className="mr-2 inline align-[-0.125em]" /><strong><a href="tel:+919440134657" className="text-teal-700 hover:underline">094401 34657 / 9440134657</a></strong></p>
+              <p><FaPhone className="mr-2 inline align-[-0.125em]" /><strong><a href="tel:+918074305036" className="text-teal-700 hover:underline">080743 05036 / 8074305036</a></strong></p>
+              <p><FaPhone className="mr-2 inline align-[-0.125em]" /><strong><a href="tel:+919113031401" className="text-teal-700 hover:underline">091130 31401 / 9113031401</a></strong></p>
               <p>📍 Marupaka Road, Near Reddy Bhavan, Vemulawada, Telangana</p>
               <p>🏡 1BHK Farmstay — Accommodates up to 10 Adults</p>
             </div>

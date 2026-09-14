@@ -23,8 +23,8 @@ export default function Features() {
 
         <Stagger className="grid grid-cols-2 gap-3 sm:gap-6 md:grid-cols-4">
           {features.map((feature) => (
-            <RevealItem key={feature.label} direction="zoom">
-              <div className="mo-card mo-sweep rounded-xl border border-teal-600 bg-teal-700/50 p-4 text-center sm:p-6">
+            <RevealItem key={feature.label} direction="zoom" className="h-full">
+              <div className="mo-card mo-sweep flex h-full min-h-[128px] flex-col items-center justify-center rounded-xl border border-teal-600 bg-teal-700/50 p-4 text-center sm:min-h-[150px] sm:p-6">
                 <span className="mo-float-slow mb-2 block text-2xl sm:mb-3 sm:text-3xl">
                   {feature.icon}
                 </span>

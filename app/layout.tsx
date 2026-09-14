@@ -116,7 +116,7 @@ const jsonLd = {
     "Best hotel and farmhouse stay in Vemulawada, Rajanna Sircilla district, Telangana. Affordable rooms, family-friendly accommodation near Sri Raja Rajeshwara Swamy Temple.",
   url: "https://www.moturifarmstay.in",
   image: "https://www.moturifarmstay.in/images/poster-farmstay3.png",
-  telephone: ["+919505834657", "+919440134657"],
+  telephone: ["+919505834657", "+919440134657", "+918074305036", "+919113031401"],
   address: {
     "@type": "PostalAddress",
     streetAddress: "Marupaka Road, Near Reddy Bhavan",

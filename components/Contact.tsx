@@ -24,11 +24,19 @@ export default function Contact() {
 
             <div className="space-y-4">
               <p>
-                <FaPhone className="mr-2 inline align-[-0.125em]" /><strong>9505834657</strong>
+                <FaPhone className="mr-2 inline align-[-0.125em]" /><strong>095058 34657 / 9505834657</strong>
               </p>
 
               <p>
-                <FaPhone className="mr-2 inline align-[-0.125em]" /><strong>9440134657</strong>
+                <FaPhone className="mr-2 inline align-[-0.125em]" /><strong>094401 34657 / 9440134657</strong>
+              </p>
+
+              <p>
+                <FaPhone className="mr-2 inline align-[-0.125em]" /><strong>080743 05036 / 8074305036</strong>
+              </p>
+
+              <p>
+                <FaPhone className="mr-2 inline align-[-0.125em]" /><strong>091130 31401 / 9113031401</strong>
               </p>
 
               <p>
