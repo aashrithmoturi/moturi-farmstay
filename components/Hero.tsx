@@ -36,7 +36,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative flex h-[78vh] min-h-[440px] items-center justify-center overflow-hidden bg-teal-950 sm:h-[85vh]">
+    <section className="relative flex min-h-[640px] items-center justify-center overflow-hidden bg-teal-950 px-4 py-24 sm:h-[90vh] sm:min-h-[680px] sm:px-6 sm:py-28">
       {/* Cinematic background — gentle fade-in + perpetual Ken Burns drift */}
       <motion.div
         className="absolute inset-0"
@@ -54,13 +54,14 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* Royal gradient veil + soft vignette for depth */}
-      <div className="absolute inset-0 bg-gradient-to-t from-teal-950/85 via-teal-950/25 to-amber-900/30" />
+      {/* Deep green veil preserves the landscape while giving the copy room to breathe. */}
+      <div className="absolute inset-0 bg-gradient-to-b from-teal-950/20 via-teal-950/10 to-teal-950/90" />
+      <div className="absolute inset-0 bg-[radial-gradient(80%_70%_at_50%_28%,transparent_38%,rgba(4,35,31,0.72)_100%)]" />
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(120% 90% at 50% 38%, transparent 45%, rgba(6,30,28,0.72) 100%)",
+            "linear-gradient(90deg, rgba(3,35,30,0.55), transparent 32%, transparent 68%, rgba(3,35,30,0.48))",
         }}
       />
 
@@ -101,38 +102,50 @@ export default function Hero() {
         variants={container}
         initial="hidden"
         animate="visible"
-        className="relative z-10 mx-4 max-w-2xl rounded-3xl border border-white/10 bg-black/30 p-6 text-center text-white shadow-2xl backdrop-blur-md sm:p-10"
+        className="relative z-10 mx-auto w-full max-w-4xl text-center text-white"
       >
         <motion.p
           variants={item}
-          className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-amber-300 sm:text-sm"
+          className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.34em] text-amber-200 sm:text-sm"
         >
+          <span className="h-px w-10 bg-amber-300/70 sm:w-16" />
           Vemulawada · Telangana
+          <span className="h-px w-10 bg-amber-300/70 sm:w-16" />
         </motion.p>
 
         <motion.h1
           variants={item}
-          className="mb-3 text-3xl font-bold drop-shadow-lg sm:mb-4 sm:text-5xl md:text-6xl"
+          className="mb-5 font-display text-5xl font-semibold leading-[0.95] tracking-wide text-amber-50 drop-shadow-[0_5px_24px_rgba(0,0,0,0.55)] sm:mb-7 sm:text-7xl md:text-8xl"
         >
-          <span className="mo-gradient-text">Moturi Farmstay</span>
+          <span className="block">Moturi</span>
+          <span className="mo-gradient-text block italic">Farmstay</span>
         </motion.h1>
+
+        <motion.div
+          variants={item}
+          className="mx-auto mb-6 flex items-center justify-center gap-3 sm:mb-8"
+        >
+          <span className="h-px w-16 bg-amber-200/50 sm:w-24" />
+          <span className="h-2 w-2 rotate-45 border border-amber-200 bg-amber-300 shadow-[0_0_16px_rgba(251,191,36,0.85)]" />
+          <span className="h-px w-16 bg-amber-200/50 sm:w-24" />
+        </motion.div>
 
         <motion.p
           variants={item}
-          className="mb-6 text-lg text-green-100 sm:mb-8 sm:text-xl md:text-2xl"
+          className="mx-auto mb-9 max-w-2xl text-lg leading-relaxed text-green-50/95 drop-shadow-md sm:mb-10 sm:text-xl md:text-2xl"
         >
-          A peaceful farm stay near Sri Raja Rajeshwara Temple
+          A warm, unhurried stay among open fields, garden lights, and the quiet beauty of Vemulawada.
         </motion.p>
 
         <motion.div
           variants={item}
-          className="flex flex-wrap justify-center gap-3 sm:gap-4"
+          className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4"
         >
           <motion.a
             href="tel:9505834657"
             whileHover={{ scale: 1.06, y: -2 }}
             whileTap={{ scale: 0.96 }}
-            className="mo-sweep rounded-lg bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-green-700 sm:px-8 sm:text-base"
+            className="mo-sweep rounded-full bg-amber-300 px-7 py-3.5 text-sm font-semibold text-teal-950 shadow-[0_14px_30px_-12px_rgba(251,191,36,0.8)] transition hover:bg-amber-200 sm:px-9 sm:text-base"
           >
             <FaPhone className="mr-2 inline align-[-0.125em]" />Call Now
           </motion.a>
@@ -143,16 +156,22 @@ export default function Hero() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.06, y: -2 }}
             whileTap={{ scale: 0.96 }}
-            className="mo-sweep rounded-lg bg-white px-6 py-3 text-sm font-semibold text-green-800 shadow-lg transition hover:bg-gray-100 sm:px-8 sm:text-base"
+            className="mo-sweep rounded-full border border-amber-100/70 bg-teal-950/25 px-7 py-3.5 text-sm font-semibold text-amber-50 shadow-lg backdrop-blur-sm transition hover:bg-teal-900/60 sm:px-9 sm:text-base"
           >
             <FaWhatsapp className="mr-2 inline align-[-0.125em]" />WhatsApp
           </motion.a>
         </motion.div>
       </motion.div>
 
+      <div className="absolute bottom-16 left-1/2 hidden -translate-x-1/2 items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-amber-100/70 sm:flex">
+        <span className="h-px w-10 bg-amber-200/40" />
+        Explore the farmstay
+        <span className="h-px w-10 bg-amber-200/40" />
+      </div>
+
       {/* Scroll cue */}
       <motion.div
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 text-2xl text-white/80"
+        className="absolute bottom-5 left-1/2 -translate-x-1/2 text-2xl text-amber-100/80"
         animate={reduce ? {} : { y: [0, 10, 0] }}
         transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
       >
